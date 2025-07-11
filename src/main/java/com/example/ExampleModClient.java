@@ -1,15 +1,15 @@
-package com.example;
+package main.java.com.example;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
-import net.minecraft.client.util.ModelIdentifier;
+import net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin; // Изменено
+import net.minecraft.client.render.model.json.ModelIdentifier; // Изменено
 import net.minecraft.util.Identifier;
 
 public class ExampleModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) -> {
-            out.accept(new ModelIdentifier(Identifier.of("mymod", "test_item#inventory"), "inventory"));
+        ModelLoadingPlugin.register(pluginContext -> {
+            pluginContext.addModels(new ModelIdentifier(Identifier.of("mymod", "test_item"), "inventory"));
         });
     }
 }
