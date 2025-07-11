@@ -1,5 +1,5 @@
-[17:59:11] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.14
-[17:59:11] [main/INFO] (FabricLoader) Loading 59 mods:
+[21:21:54] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.14
+[21:21:54] [main/INFO] (FabricLoader) Loading 59 mods:
 	- fabric-api 0.92.6+1.20.1
 	- fabric-api-base 0.4.32+1802ada577
 	- fabric-api-lookup-api-v1 1.6.37+1802ada577
@@ -59,29 +59,85 @@
 	- minecraft 1.20.1
 	- mixinextras 0.4.1
 	- mymod 1.0.0
-[17:59:11] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/danil/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.5+mixin.0.8.7/22f9eb729e216a091673a574a5906dc1b9027fb3/sponge-mixin-0.15.5+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
-[17:59:11] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[17:59:11] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
-[17:59:11] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[17:59:11] [main/ERROR] (FabricLoader) Uncaught exception in thread "main"
-java.lang.RuntimeException: Error parsing or using Mixin config mymod.client.mixins.json for mod mymod
-	at net.fabricmc.loader.impl.launch.FabricMixinBootstrap.init(FabricMixinBootstrap.java:96) ~[fabric-loader-0.16.14.jar:?]
-	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:151) ~[fabric-loader-0.16.14.jar:?]
-	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68) ~[fabric-loader-0.16.14.jar:?]
+[21:21:54] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/danil/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.5+mixin.0.8.7/22f9eb729e216a091673a574a5906dc1b9027fb3/sponge-mixin-0.15.5+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[21:21:55] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[21:21:55] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
+[21:21:55] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[21:21:55] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[21:21:56] [main/WARN] (PerfmonDisabled) Invalid registry value type detected for PerfOS counters. Should be REG_DWORD. Ignoring: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\Disable Performance Counters.
+[21:21:59] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 119 milliseconds
+[21:22:00] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[21:22:01] [Render thread/ERROR] (Minecraft) Failed to verify authentication
+com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
+	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:56) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:156) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.<init>(YggdrasilUserApiService.java:55) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.createUserApiService(YggdrasilAuthenticationService.java:124) ~[authlib-4.0.43.jar:?]
+	at net.minecraft.client.MinecraftClient.createUserApiService(MinecraftClient.java:733) ~[minecraft-clientOnly-4060f3af86-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2.jar:?]
+	at net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:442) ~[minecraft-clientOnly-4060f3af86-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:211) ~[minecraft-clientOnly-4060f3af86-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480) ~[fabric-loader-0.16.14.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) ~[fabric-loader-0.16.14.jar:?]
 	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) ~[fabric-loader-0.16.14.jar:?]
-	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[?:?]
-Caused by: org.spongepowered.asm.launch.MixinInitialisationError: Error initialising mixin config mymod.client.mixins.json
-	at org.spongepowered.asm.mixin.transformer.Config.create(Config.java:168) ~[sponge-mixin-0.15.5+mixin.0.8.7.jar:0.15.5+mixin.0.8.7]
-	at org.spongepowered.asm.mixin.Mixins.createConfiguration(Mixins.java:121) ~[sponge-mixin-0.15.5+mixin.0.8.7.jar:0.15.5+mixin.0.8.7]
-	at org.spongepowered.asm.mixin.Mixins.addConfiguration(Mixins.java:108) ~[sponge-mixin-0.15.5+mixin.0.8.7.jar:0.15.5+mixin.0.8.7]
-	at org.spongepowered.asm.mixin.Mixins.addConfiguration(Mixins.java:98) ~[sponge-mixin-0.15.5+mixin.0.8.7.jar:0.15.5+mixin.0.8.7]
-	at net.fabricmc.loader.impl.launch.FabricMixinBootstrap.init(FabricMixinBootstrap.java:94) ~[fabric-loader-0.16.14.jar:?]
-	... 4 more
-Caused by: java.lang.IllegalArgumentException: The specified resource 'mymod.client.mixins.json' was invalid or could not be read
-	at org.spongepowered.asm.mixin.transformer.MixinConfig.create(MixinConfig.java:1395) ~[sponge-mixin-0.15.5+mixin.0.8.7.jar:0.15.5+mixin.0.8.7]
-	at org.spongepowered.asm.mixin.transformer.Config.create(Config.java:163) ~[sponge-mixin-0.15.5+mixin.0.8.7.jar:0.15.5+mixin.0.8.7]
-	at org.spongepowered.asm.mixin.Mixins.createConfiguration(Mixins.java:121) ~[sponge-mixin-0.15.5+mixin.0.8.7.jar:0.15.5+mixin.0.8.7]
-	at org.spongepowered.asm.mixin.Mixins.addConfiguration(Mixins.java:108) ~[sponge-mixin-0.15.5+mixin.0.8.7.jar:0.15.5+mixin.0.8.7]
-	at org.spongepowered.asm.mixin.Mixins.addConfiguration(Mixins.java:98) ~[sponge-mixin-0.15.5+mixin.0.8.7.jar:0.15.5+mixin.0.8.7]
-	at net.fabricmc.loader.impl.launch.FabricMixinBootstrap.init(FabricMixinBootstrap.java:94) ~[fabric-loader-0.16.14.jar:?]
-	... 4 more
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[dev-launch-injector-0.2.1+build.8.jar:?]
+Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 401
+	at com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:85) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:48) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:129) ~[authlib-4.0.43.jar:?]
+	... 9 more
+[21:22:01] [Render thread/INFO] (Minecraft) Setting user: Player727
+[21:22:01] [Render thread/INFO] (mymod) Test item registered!
+[21:22:01] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[21:22:01] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.1 SNAPSHOT
+[21:22:02] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric (fabric-object-builder-api-v1, fabric-mining-level-api-v1, fabric-resource-conditions-api-v1, fabric-gametest-api-v1, fabric-content-registries-v0, fabric-transfer-api-v1, fabric-commands-v0, fabric-block-view-api-v2, fabric-model-loading-api-v1, fabric-renderer-api-v1, fabric-models-v0, fabric-events-lifecycle-v0, fabric-client-tags-api-v1, fabric-transitive-access-wideners-v1, fabric-convention-tags-v1, fabric-rendering-v0, fabric-command-api-v2, fabric-key-binding-api-v1, fabricloader, fabric-recipe-api-v1, fabric-networking-api-v1, fabric-registry-sync-v0, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-keybindings-v0, fabric-resource-loader-v0, fabric-loot-api-v2, fabric-biome-api-v1, fabric-networking-v0, fabric-message-api-v1, fabric-api, fabric-loot-tables-v1, fabric-api-base, fabric-screen-api-v1, fabric-dimensions-v1, fabric-events-interaction-v0, fabric-item-group-api-v1, fabric-data-generation-api-v1, mymod, fabric-item-api-v1, fabric-rendering-data-attachment-v1, fabric-blockrenderlayer-v1, fabric-entity-events-v1, fabric-sound-api-v1, fabric-lifecycle-events-v1, fabric-particles-v1, fabric-command-api-v1, fabric-api-lookup-api-v1, fabric-containers-v0, fabric-crash-report-info-v1, fabric-game-rule-api-v1, fabric-data-attachment-api-v1, fabric-screen-handler-api-v1, fabric-block-api-v1, fabric-renderer-registries-v1, fabric-renderer-indigo)
+[21:22:02] [Worker-Main-4/INFO] (Minecraft) Found unifont_all_no_pua-15.0.06.hex, loading
+[21:22:03] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[21:22:03] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
+[21:22:03] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[21:22:03] [Render thread/INFO] (Minecraft) OpenAL initialized on device OpenAL Soft on Динамики (4- fifine Headset)
+[21:22:03] [Render thread/INFO] (Minecraft) Sound engine started
+[21:22:03] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[21:22:03] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[21:22:03] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[21:22:03] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[21:22:03] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[21:22:03] [Render thread/INFO] (Minecraft) Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[21:22:03] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[21:22:03] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[21:22:03] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[21:22:03] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[21:22:04] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[21:22:04] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[21:22:04] [Render thread/INFO] (Minecraft) Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[21:22:08] [Render thread/INFO] (Minecraft) Loaded 7 recipes
+[21:22:08] [Render thread/INFO] (Minecraft) Loaded 1271 advancements
+[21:22:08] [Render thread/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 64 new biomes in 930.8 ?s
+[21:22:08] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.20.1
+[21:22:08] [Server thread/INFO] (Minecraft) Generating keypair
+[21:22:08] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[21:22:09] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[21:22:09] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[21:22:09] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[21:22:10] [Render thread/INFO] (Minecraft) Preparing spawn area: 17%
+[21:22:10] [Render thread/INFO] (Minecraft) Time elapsed: 1776 ms
+[21:22:10] [Server thread/INFO] (Minecraft) Changing view distance to 12, from 10
+[21:22:10] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
+[21:22:10] [Server thread/INFO] (Minecraft) Player727[local:E:1a541a13] logged in with entity id 13 at (9.907229684290186, -60.0, -0.5339131952624562)
+[21:22:10] [Server thread/INFO] (Minecraft) Player727 joined the game
+[21:22:11] [Render thread/INFO] (Minecraft) Loaded 2 advancements
+[21:22:20] [Server thread/INFO] (Minecraft) [Player727: Gave 1 [item.mymod.test_item] to Player727]
+[21:22:20] [Render thread/INFO] (Minecraft) [System] [CHAT] Gave 1 [item.mymod.test_item] to Player727
+[21:23:32] [Render thread/INFO] (Minecraft) Stopping!
+[21:23:32] [Server thread/INFO] (Minecraft) Player727 lost connection: Disconnected
+[21:23:32] [Server thread/INFO] (Minecraft) Player727 left the game
+[21:23:32] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[21:23:32] [Server thread/INFO] (Minecraft) Stopping server
+[21:23:32] [Server thread/INFO] (Minecraft) Saving players
+[21:23:32] [Server thread/INFO] (Minecraft) Saving worlds
+[21:23:32] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[21:23:35] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[21:23:35] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[21:23:35] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (New World): All chunks are saved
+[21:23:35] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[21:23:35] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[21:23:35] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved

@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "mymod",
-	"version": "${version}",
+	"version": "1.0.0",
 	"name": "My mod",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
@@ -17,9 +17,6 @@
 	"entrypoints": {
 		"main": [
 			"com.example.ExampleMod"
-		],
-		"client": [
-			"com.example.ExampleModClient"
 		]
 	},
 	"depends": {
