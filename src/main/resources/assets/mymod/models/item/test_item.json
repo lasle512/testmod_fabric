@@ -2,9 +2,9 @@
 	"format_version": "1.20.1",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "texture",
-		"1": "texture2",
-		"particle": "texture"
+		"0": "mymod:item/test_item",
+		"1": "mymod:item/test_item",
+		"particle": "mymod:item/test_item"
 	},
 	"elements": [
 		{
